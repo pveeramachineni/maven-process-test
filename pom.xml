@@ -34,9 +34,11 @@
 					<!-- Prevents deployments from dev workstations so that they can be 
 						done by a CI server -->
 					<noDeploy>true</noDeploy>
-					<tagMessage>Tagging release ${version}</tagMessage>
+					<tagMessage>Tagging release ${project.version}</tagMessage>
 					<flowInitContext>
+						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
+						<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
 						<versionTagPrefix>v</versionTagPrefix>
 					</flowInitContext>
 				</configuration>
