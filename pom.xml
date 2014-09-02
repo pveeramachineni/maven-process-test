@@ -21,9 +21,11 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>external.atlassian.jgitflow</groupId>
-				<artifactId>jgitflow-maven-plugin</artifactId>
-				<version>1.0-m1</version>
+				<groupId>com.atlassian.maven.plugins</groupId>
+				<artifactId>maven-jgitflow-plugin</artifactId>
+				<version>1.0-alpha27</version>
+				<!-- <groupId>external.atlassian.jgitflow</groupId> <artifactId>jgitflow-maven-plugin</artifactId> 
+					<version>1.0-m3</version> -->
 				<configuration>
 					<!-- Enable this to push to origin using SSH keys -->
 					<enableSshAgent>true</enableSshAgent>
