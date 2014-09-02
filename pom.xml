@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.pv</groupId>
+	<artifactId>maven-process-tests</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>maven-process-tests</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.atlassian.maven.plugins</groupId>
+				<artifactId>maven-jgitflow-plugin</artifactId>
+				<version>1.0-alpha27</version>
+				<!-- <groupId>external.atlassian.jgitflow</groupId> <artifactId>jgitflow-maven-plugin</artifactId> 
+					<version>1.0-m3</version> -->
+				<configuration>
+					<!-- Enable this to push to origin using SSH keys -->
+					<enableSshAgent>true</enableSshAgent>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<pushFeatures>true</pushFeatures>
+					<pushReleases>true</pushReleases>
+					<pushHotfixes>true</pushHotfixes>
+					<!-- Prevents deployments from dev workstations so that they can be 
+						done by a CI server -->
+					<noDeploy>true</noDeploy>
+					<tagMessage>Tagging release ${project.version}</tagMessage>
+					<flowInitContext>
+						<featureBranchPrefix>feature-</featureBranchPrefix>
+						<releaseBranchPrefix>release-</releaseBranchPrefix>
+						<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+						<versionTagPrefix>v</versionTagPrefix>
+					</flowInitContext>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
