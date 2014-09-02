@@ -26,14 +26,11 @@
 				<!-- <groupId>external.atlassian.jgitflow</groupId> <artifactId>jgitflow-maven-plugin</artifactId> 
 					<version>1.0-m3</version> -->
 				<configuration>
-					<!-- Enable this to push to origin using SSH keys -->
 					<enableSshAgent>true</enableSshAgent>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<pushFeatures>true</pushFeatures>
 					<pushReleases>true</pushReleases>
 					<pushHotfixes>true</pushHotfixes>
-					<!-- Prevents deployments from dev workstations so that they can be 
-						done by a CI server -->
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
 					<flowInitContext>
