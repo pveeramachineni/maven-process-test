@@ -4,7 +4,7 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<name>maven-process-tests</name>
 
 	<dependencies>
@@ -20,20 +20,18 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>com.atlassian.maven.plugins</groupId>
+				<!-- <groupId>com.atlassian.maven.plugins</groupId>
 				<artifactId>maven-jgitflow-plugin</artifactId>
-				<version>1.0-alpha27</version>
-				<!-- <groupId>external.atlassian.jgitflow</groupId> <artifactId>jgitflow-maven-plugin</artifactId> 
-					<version>1.0-m3</version> -->
+				<version>1.0-alpha27</version> -->
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m3</version>
 				<configuration>
-					<!-- Enable this to push to origin using SSH keys -->
 					<enableSshAgent>true</enableSshAgent>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<pushFeatures>true</pushFeatures>
 					<pushReleases>true</pushReleases>
 					<pushHotfixes>true</pushHotfixes>
-					<!-- Prevents deployments from dev workstations so that they can be 
-						done by a CI server -->
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
 					<flowInitContext>
