@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.pv</groupId>
     <artifactId>maven-process-tests</artifactId>
-    <version>1.5.0</version>
+    <version>1.6.0-SNAPSHOT</version>
   </parent>
   <artifactId>module-1</artifactId>
   <packaging>jar</packaging>
