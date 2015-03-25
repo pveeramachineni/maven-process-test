@@ -7,10 +7,6 @@
 	<version>1.10.0-SNAPSHOT</version>
 	<name>maven-process-tests</name>
 
-	<properties>
-		<next.development.version>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -24,7 +20,7 @@
 		<profile>
 			<id>next-release-major</id>
 			<properties>
-				<next.development.version>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
+				<developmentVersion>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</developmentVersion>
 			</properties>
 		</profile>
 	</profiles>
@@ -55,7 +51,7 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
-					<developmentVersion>1.10.0-SNAPSHOT</developmentVersion>
+					<developmentVersion>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</developmentVersion>
 					<flowInitContext>
 						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
