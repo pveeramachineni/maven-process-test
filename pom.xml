@@ -56,6 +56,7 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
+					<developmentVersion>${next.development.version}</developmentVersion>
 					<flowInitContext>
 						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
