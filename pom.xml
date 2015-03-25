@@ -4,7 +4,7 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>pom</packaging>
-	<version>1.8.3</version>
+	<version>1.8.4</version>
 	<name>maven-process-tests</name>
 
 	<properties>
@@ -56,7 +56,6 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
-					<developmentVersion>${next.development.version}</developmentVersion>
 					<flowInitContext>
 						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
