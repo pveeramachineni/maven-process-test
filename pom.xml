@@ -24,7 +24,7 @@
 		<profile>
 			<id>next-release-major</id>
 			<properties>
-				<nextDevelopmentVersion>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</nextDevelopmentVersion>
+				<nextDevelopmentVersion>${parsedVersion.nextMajorVersion}.0.${parsedVersion.incrementalVersion}</nextDevelopmentVersion>
 			</properties>
 		</profile>
 	</profiles>
