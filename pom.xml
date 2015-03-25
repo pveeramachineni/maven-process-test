@@ -4,7 +4,7 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>pom</packaging>
-	<version>1.8.4-SNAPSHOT</version>
+	<version>1.8.3</version>
 	<name>maven-process-tests</name>
 
 	<properties>
