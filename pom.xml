@@ -16,11 +16,15 @@
 		</dependency>
 	</dependencies>
 
+	<properties>
+		<nextDevelopmentVersion>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</nextDevelopmentVersion>
+	</properties>
+
 	<profiles>
 		<profile>
 			<id>next-release-major</id>
 			<properties>
-				<developmentVersion>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</developmentVersion>
+				<nextDevelopmentVersion>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</nextDevelopmentVersion>
 			</properties>
 		</profile>
 	</profiles>
@@ -51,7 +55,7 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
-					<developmentVersion>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</developmentVersion>
+					<developmentVersion>${nextDevelopmentVersion}-SNAPSHOT</developmentVersion>
 					<flowInitContext>
 						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
