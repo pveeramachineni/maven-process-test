@@ -4,7 +4,7 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>pom</packaging>
-	<version>1.10.0</version>
+	<version>1.10.1</version>
 	<name>maven-process-tests</name>
 
 	<dependencies>
@@ -63,7 +63,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.9.1</version>
+				<version>1.8</version>
 			</plugin>
 		</plugins>
 	</build>
