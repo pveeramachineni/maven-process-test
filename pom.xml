@@ -8,7 +8,7 @@
 	<name>maven-process-tests</name>
 
 	<properties>
-		<release.version></release.version>
+		<release.version />
 		<next.development.version>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
 	</properties>
 
