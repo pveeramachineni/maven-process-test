@@ -4,8 +4,13 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>pom</packaging>
-	<version>1.8.1</version>
+	<version>1.8.2</version>
 	<name>maven-process-tests</name>
+
+	<properties>
+		<release.version />
+		<next.development.version>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -16,6 +21,14 @@
 		</dependency>
 	</dependencies>
 
+	<profiles>
+	    <profile>
+	       <id>next-release-major</id>
+	       <properties>
+					<next.development.version>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
+	       </properties>
+	    </profile>
+	</profiles>
 
 	<build>
 		<plugins>
@@ -43,6 +56,7 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
+					<developmentVersion>${next.development.version}</developmentVersion>
 					<flowInitContext>
 						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
@@ -51,6 +65,11 @@
 					</flowInitContext>
 				</configuration>
 			</plugin>
+			<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.9.1</version>
+      </plugin>
 		</plugins>
 	</build>
 
