@@ -4,11 +4,10 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>pom</packaging>
-	<version>1.9.0</version>
+	<version>1.9.1</version>
 	<name>maven-process-tests</name>
 
 	<properties>
-		<release.version />
 		<next.development.version>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
 	</properties>
 
@@ -22,12 +21,12 @@
 	</dependencies>
 
 	<profiles>
-	    <profile>
-	       <id>next-release-major</id>
-	       <properties>
-					<next.development.version>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
-	       </properties>
-	    </profile>
+		<profile>
+			<id>next-release-major</id>
+			<properties>
+				<next.development.version>${parsedVersion.nextMajorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</next.development.version>
+			</properties>
+		</profile>
 	</profiles>
 
 	<build>
@@ -56,7 +55,7 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Tagging release ${project.version}</tagMessage>
-					<developmentVersion>${next.development.version}</developmentVersion>
+					<developmentVersion>1.10.0-SNAPSHOT</developmentVersion>
 					<flowInitContext>
 						<featureBranchPrefix>feature-</featureBranchPrefix>
 						<releaseBranchPrefix>release-</releaseBranchPrefix>
@@ -66,10 +65,10 @@
 				</configuration>
 			</plugin>
 			<plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.9.1</version>
-      </plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.9.1</version>
+			</plugin>
 		</plugins>
 	</build>
 
