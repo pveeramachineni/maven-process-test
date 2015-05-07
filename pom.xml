@@ -47,7 +47,10 @@
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
 					<tagMessage>Nice tagging method: Tagging version ${project.version}</tagMessage>
-					<developmentVersion>${nextDevelopmentVersion}-SNAPSHOT</developmentVersion>
+					<noReleaseBuild>true</noReleaseBuild>
+					<noHotfixBuild>true</noHotfixBuild>
+					<allowUntracked>true</allowUntracked>
+					<developmentVersion>${next.development.version}-SNAPSHOT</developmentVersion>
 					<flowInitContext>
 						<versionTagPrefix>v</versionTagPrefix>
 					</flowInitContext>
