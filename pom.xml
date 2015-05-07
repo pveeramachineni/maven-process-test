@@ -4,7 +4,7 @@
 	<groupId>org.pv</groupId>
 	<artifactId>maven-process-tests</artifactId>
 	<packaging>pom</packaging>
-	<version>2.1.0</version>
+	<version>2.2.0</version>
 	<name>maven-process-tests</name>
 
 	<modules>
@@ -40,31 +40,18 @@
 				<groupId>external.atlassian.jgitflow</groupId>
 				<artifactId>jgitflow-maven-plugin</artifactId>
 				<version>1.0-m4.3</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.eclipse.jgit</groupId>
-						<artifactId>org.eclipse.jgit.console</artifactId>
-						<version>3.3.1.201403241930-r</version>
-						<exclusions>
-							<exclusion>
-								<groupId>com.googlecode.javaewah</groupId>
-								<artifactId>JavaEWAH</artifactId>
-							</exclusion>
-						</exclusions>
-					</dependency>
-				</dependencies>
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<pushFeatures>true</pushFeatures>
 					<pushReleases>true</pushReleases>
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
-					<tagMessage>Tagging release ${project.version}</tagMessage>
-					<developmentVersion>${nextDevelopmentVersion}-SNAPSHOT</developmentVersion>
+					<tagMessage>Nice tagging method: Tagging version ${project.version}</tagMessage>
+					<noReleaseBuild>true</noReleaseBuild>
+					<noHotfixBuild>true</noHotfixBuild>
+					<allowUntracked>true</allowUntracked>
+					<developmentVersion>${next.development.version}-SNAPSHOT</developmentVersion>
 					<flowInitContext>
-						<featureBranchPrefix>feature-</featureBranchPrefix>
-						<releaseBranchPrefix>release-</releaseBranchPrefix>
-						<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
 						<versionTagPrefix>v</versionTagPrefix>
 					</flowInitContext>
 				</configuration>

@@ -3,3 +3,5 @@
 .project
 .settings/
 .DS_Store
+/module-1/target
+/module-2/target
