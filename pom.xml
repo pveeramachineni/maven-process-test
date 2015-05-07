@@ -40,31 +40,15 @@
 				<groupId>external.atlassian.jgitflow</groupId>
 				<artifactId>jgitflow-maven-plugin</artifactId>
 				<version>1.0-m4.3</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.eclipse.jgit</groupId>
-						<artifactId>org.eclipse.jgit.console</artifactId>
-						<version>3.3.1.201403241930-r</version>
-						<exclusions>
-							<exclusion>
-								<groupId>com.googlecode.javaewah</groupId>
-								<artifactId>JavaEWAH</artifactId>
-							</exclusion>
-						</exclusions>
-					</dependency>
-				</dependencies>
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<pushFeatures>true</pushFeatures>
 					<pushReleases>true</pushReleases>
 					<pushHotfixes>true</pushHotfixes>
 					<noDeploy>true</noDeploy>
-					<tagMessage>Tagging release ${project.version}</tagMessage>
+					<tagMessage>Nice tagging method: Tagging version ${project.version}</tagMessage>
 					<developmentVersion>${nextDevelopmentVersion}-SNAPSHOT</developmentVersion>
 					<flowInitContext>
-						<featureBranchPrefix>feature-</featureBranchPrefix>
-						<releaseBranchPrefix>release-</releaseBranchPrefix>
-						<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
 						<versionTagPrefix>v</versionTagPrefix>
 					</flowInitContext>
 				</configuration>
